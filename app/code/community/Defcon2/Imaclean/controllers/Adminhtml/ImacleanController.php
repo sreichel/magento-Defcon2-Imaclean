@@ -76,4 +76,9 @@ class Defcon2_Imaclean_Adminhtml_ImacleanController extends Mage_Adminhtml_Contr
         }
         $this->_redirect('*/*/index');
     }
+    
+    protected function _isAllowed()
+    {
+        return Mage::getSingleton('admin/session')->isAllowed('system/d2imaclean');
+    }
 }
