@@ -27,7 +27,7 @@ if (file_exists($oldDir)) {
         if (unlink($etcFile)) {
             unlink(Mage::getBaseDir('design') . DS . 'adminhtml' . DS . 'default' . DS . 'default' . DS . 'layout' . DS . 'imaclean.xml');
             Varien_Io_File::rmdirRecursive($oldDir);
-            $installer->run("DELETE FROM `core_resource`  WHERE `code` = 'imaclean_setup'");
+            $installer->run("DELETE FROM {$this->getTable('core_resource')}  WHERE `code` = 'imaclean_setup'");
         }
     }
 }
