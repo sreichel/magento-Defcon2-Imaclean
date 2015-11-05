@@ -7,9 +7,10 @@
  * @package    Defcon2_Imaclean
  * @copyright  Copyright (c) 2016 Manuel Canepa (http://cv.manuelcanepa.com.ar/)
  */
-class Defcon2_Imaclean_Adminhtml_ImacleanController extends Mage_Adminhtml_Controller_Action {
-
-    protected function _initAction() {
+class Defcon2_Imaclean_Adminhtml_ImacleanController extends Mage_Adminhtml_Controller_Action
+{
+    protected function _initAction()
+    {
         $this->loadLayout()
             ->_setActiveMenu('defcon2imaclean/items')
             ->_addBreadcrumb(Mage::helper('adminhtml')->__('Items Manager'), Mage::helper('adminhtml')->__('Item Manager'));
@@ -17,19 +18,22 @@ class Defcon2_Imaclean_Adminhtml_ImacleanController extends Mage_Adminhtml_Contr
         return $this;
     }
 
-    public function indexAction() {
+    public function indexAction()
+    {
         $this->loadLayout();
         $this->_setActiveMenu('system/d2imaclean');
         $this->_addContent($this->getLayout()->createBlock('defcon2imaclean/adminhtml_imaclean'));
         $this->renderLayout();
     }
 
-    public function newAction() {
+    public function newAction()
+    {
         Mage::helper('defcon2imaclean')->compareList();
         $this->_redirect('*/*/');
     }
 
-    public function deleteAction() {
+    public function deleteAction()
+    {
         if ($this->getRequest()->getParam('id') > 0) {
             try {
                 $model = Mage::getModel('defcon2imaclean/imaclean');
@@ -47,7 +51,8 @@ class Defcon2_Imaclean_Adminhtml_ImacleanController extends Mage_Adminhtml_Contr
         $this->_redirect('*/*/');
     }
 
-    public function massDeleteAction() {
+    public function massDeleteAction()
+    {
         $imacleanIds = $this->getRequest()->getParam('imaclean');
         if (!is_array($imacleanIds)) {
             Mage::getSingleton('adminhtml/session')->addError(Mage::helper('adminhtml')->__('Please select item(s)'));
@@ -61,7 +66,8 @@ class Defcon2_Imaclean_Adminhtml_ImacleanController extends Mage_Adminhtml_Contr
                 }
                 Mage::getSingleton('adminhtml/session')->addSuccess(
                     Mage::helper('adminhtml')->__(
-                        'Total of %d record(s) were successfully deleted', count($imacleanIds)
+                        'Total of %d record(s) were successfully deleted',
+                        count($imacleanIds)
                     )
                 );
             } catch (Exception $e) {
@@ -70,5 +76,4 @@ class Defcon2_Imaclean_Adminhtml_ImacleanController extends Mage_Adminhtml_Contr
         }
         $this->_redirect('*/*/index');
     }
-
 }

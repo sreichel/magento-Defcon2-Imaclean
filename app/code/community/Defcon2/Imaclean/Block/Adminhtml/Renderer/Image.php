@@ -7,7 +7,8 @@
  * @package    Defcon2_Imaclean
  * @copyright  Copyright (c) 2016 Manuel Canepa (http://cv.manuelcanepa.com.ar/)
  */
-class Defcon2_Imaclean_Block_Adminhtml_Renderer_Image extends Mage_Adminhtml_Block_Widget_Grid_Column_Renderer_Abstract {
+class Defcon2_Imaclean_Block_Adminhtml_Renderer_Image extends Mage_Adminhtml_Block_Widget_Grid_Column_Renderer_Abstract
+{
 
     /**
      * Format variables pattern
@@ -22,7 +23,8 @@ class Defcon2_Imaclean_Block_Adminhtml_Renderer_Image extends Mage_Adminhtml_Blo
      * @param Varien_Object $row
      * @return mixed
      */
-    public function _getValue(Varien_Object $row) {
+    public function _getValue(Varien_Object $row)
+    {
 
         $format = ( $this->getColumn()->getFormat() ) ? $this->getColumn()->getFormat() : null;
         $defaultValue = $this->getColumn()->getDefault();
@@ -46,5 +48,4 @@ class Defcon2_Imaclean_Block_Adminhtml_Renderer_Image extends Mage_Adminhtml_Blo
         $location = Mage::getStoreConfig('web/secure/base_url');
         return "<img src='" . $location . "media/catalog/product{$url}' alt='{$url}' title='{$url}' width='150' height='150' />";
     }
-
 }

@@ -1,17 +1,19 @@
 <?php
 
-class Defcon2_Imaclean_Model_Mysql4_Imaclean_Collection extends Mage_Core_Model_Mysql4_Collection_Abstract {
-
+class Defcon2_Imaclean_Model_Mysql4_Imaclean_Collection extends Mage_Core_Model_Mysql4_Collection_Abstract
+{
     protected $total;
 
-    public function _construct() {
+    public function _construct()
+    {
         parent::_construct();
         $this->_init('defcon2imaclean/imaclean');
     }
 
     // trae imagenes que estan guardadas en la base de datos...
 
-    public function getImages() {
+    public function getImages()
+    {
         try {
             $this->setConnection($this->getResource()->getReadConnection());
             $this->getSelect()
@@ -28,5 +30,4 @@ class Defcon2_Imaclean_Model_Mysql4_Imaclean_Collection extends Mage_Core_Model_
 
         return $array;
     }
-
 }

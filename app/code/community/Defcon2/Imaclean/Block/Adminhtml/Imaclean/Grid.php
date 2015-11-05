@@ -7,8 +7,8 @@
  * @package    Defcon2_Imaclean
  * @copyright  Copyright (c) 2016 Manuel Canepa (http://cv.manuelcanepa.com.ar/)
  */
-class Defcon2_Imaclean_Block_Adminhtml_Imaclean_Grid extends Mage_Adminhtml_Block_Widget_Grid {
-
+class Defcon2_Imaclean_Block_Adminhtml_Imaclean_Grid extends Mage_Adminhtml_Block_Widget_Grid
+{
     public function __construct()
     {
         parent::__construct();
@@ -38,8 +38,8 @@ class Defcon2_Imaclean_Block_Adminhtml_Imaclean_Grid extends Mage_Adminhtml_Bloc
         ));
 
         $this->addColumn(
-           'action',
-           array(
+            'action',
+            array(
                 'header' => Mage::helper('defcon2imaclean')->__('Action'),
                 'width' => '100',
                 'type' => 'action',
@@ -51,17 +51,18 @@ class Defcon2_Imaclean_Block_Adminhtml_Imaclean_Grid extends Mage_Adminhtml_Bloc
                         'field' => 'id'
                     )
                 ),
-            'filter' => false,
-            'sortable' => false,
-            'index' => 'stores',
-            'is_system' => true,
-        ));
+                'filter' => false,
+                'sortable' => false,
+                'index' => 'stores',
+                'is_system' => true,
+            )
+        );
 
         return parent::_prepareColumns();
     }
 
-    protected function _prepareMassaction() {
-
+    protected function _prepareMassaction()
+    {
         $this->setMassactionIdField('imaclean_id');
         $this->getMassactionBlock()->setFormFieldName('imaclean');
 
@@ -72,5 +73,4 @@ class Defcon2_Imaclean_Block_Adminhtml_Imaclean_Grid extends Mage_Adminhtml_Bloc
         ));
         return $this;
     }
-
 }

@@ -7,13 +7,14 @@
  * @package    Defcon2_Imaclean
  * @copyright  Copyright (c) 2016 Manuel Canepa (http://cv.manuelcanepa.com.ar/)
  */
-class Defcon2_Imaclean_Helper_Data extends Mage_Core_Helper_Abstract {
-
+class Defcon2_Imaclean_Helper_Data extends Mage_Core_Helper_Abstract
+{
     protected $result = array();
     protected $_mainTable;
     public $valdir = array();
 
-    public function listDirectories($path) {
+    public function listDirectories($path)
+    {
         if (is_dir($path)) {
             if ($dir = opendir($path)) {
                 while (($entry = readdir($dir)) !== false) {
@@ -31,8 +32,8 @@ class Defcon2_Imaclean_Helper_Data extends Mage_Core_Helper_Abstract {
         return $this->result;
     }
 
-    public function compareList() {
-
+    public function compareList()
+    {
         $valores = Mage::getModel('defcon2imaclean/imaclean')->getCollection()->getImages();
 
         $pepe = 'media' . DS . 'catalog' . DS . 'product';
@@ -49,11 +50,9 @@ class Defcon2_Imaclean_Helper_Data extends Mage_Core_Helper_Abstract {
                     $model->save();
                 }
             } catch (Zend_Db_Exception $e) {
-
             } catch (Exception $e) {
                 Mage::log($e->getMessage());
             }
         }
     }
-
 }
