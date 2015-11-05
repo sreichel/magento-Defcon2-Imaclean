@@ -1,18 +1,20 @@
 <?xml version="1.0"?>
 <package>
     <name>Mage_Imaclean</name>
-    <version>0.1.0</version>
-    <stability>beta</stability>
-    <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL)</license>
     <channel>community</channel>
     <extends/>
-    <summary>This extension allows to list all the product images that already are not in use and to erase them.</summary>
-    <description>This extension lists all the product images that they find in the directory "media/catalog/product" and that they do not find in the database. It allows to select and to erase these files.</description>
-    <notes>No notes</notes>
-    <authors><author><name>defcon2</name><user>auto-converted</user><email>manuel@e-fluxus.com</email></author></authors>
-    <date>2009-04-13</date>
-    <time>11:02:11</time>
-    <contents><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="imaclean.xml" hash="103023a683f6b6fb9b6c74a2489ca9f2"/></dir></dir></dir></dir></target><target name="magelocal"><dir name="Mage"><dir name="Imaclean"><dir name="Block"><dir name="Adminhtml"><dir name="Imaclean"><file name="Grid.php" hash="393ef4f285fba3c75ebe4aa21a016c7e"/></dir><dir name="Renderer"><file name="Image.php" hash="ce6e171f069a87b17aa80b7318735359"/></dir><file name="Imaclean.php" hash="af231f45275404f280a30342138c863e"/></dir><file name="Imaclean.php" hash="b61726220887251370ee2f533bd48c5f"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="ImacleanController.php" hash="6db44227e283dcc0da4272660f62c225"/></dir><file name="IndexController.php" hash="9bb2fed7a6e11c20c82c7f60dbbd8d5c"/></dir><dir name="etc"><file name="config.xml" hash="e83915ed50fa9399d55c4716d1fb002e"/></dir><dir name="Helper"><file name="Data.php" hash="88e034c6fec139bbf03baace7c10ab22"/></dir><dir name="Model"><dir name="Mysql4"><dir name="Imaclean"><file name="Collection.php" hash="600d097a0f7f83119981578523bf4305"/></dir><file name="Imaclean.php" hash="56794405f0401b20eac6a2d3c0f5c09d"/></dir><file name="Imaclean.php" hash="c729e132945284856ae53d230f006e37"/><file name="Status.php" hash="e6bc2c02406bba86b31515f6deb82c10"/></dir><dir name="sql"><dir name="imaclean_setup"><file name="mysql4-install-0.1.0.php" hash="65a1e75360822cd133a3e704f8499e0b"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Mage_Imaclean.xml" hash="5fc26361ae583682d091b0bc947f161d"/></dir></target></contents>
+    <summary>This extension allows to list all the product images that already are not in use and to erase them.&#xD;
+</summary>
+    <description>This extension allows to list all the product images that already are not in use and to erase them.&#xD;
+</description>
+    <notes>* SUPEE-6788 FIX</notes>
+    <authors><author><name>Manuel Canepa</name><user>defcon2</user><email>manuelcanepa@gmail.com</email></author></authors>
+    <date>2015-10-23</date>
+    <time>19:29:21</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="Defcon2_Imaclean.xml" hash="157b3ce1c82a2b4b9a0a42875168cb56"/></dir></target><target name="magecommunity"><dir name="Defcon2"><dir name="Imaclean"><dir name="Block"><dir name="Adminhtml"><dir name="Defcon2imaclean"><file name="Grid.php" hash="af5b14246ee90f6d5c070f9eb3df423e"/></dir><dir name="Imaclean"><file name="Grid.php" hash="af5b14246ee90f6d5c070f9eb3df423e"/></dir><file name="Imaclean.php" hash="7e2f357b4b7976c82d14ad0d173adbf6"/><dir name="Renderer"><file name="Image.php" hash="d8d95b56e62d37ce2a60c19c04c9070d"/></dir></dir><file name="Imaclean.php" hash="229e40a71ac2213fb1fd262e78cf26c7"/></dir><dir name="Helper"><file name="Data.php" hash="dd309cde61b6565a2cb1893fb5feff83"/></dir><dir name="Model"><file name="Imaclean.php" hash="119d3950d04b4f31d3fc592daf100b50"/><dir name="Mysql4"><dir name="Imaclean"><file name="Collection.php" hash="8e06b24c560e0a65c97a2abb14594526"/></dir><file name="Imaclean.php" hash="f6577dccee30f77e583f79522d3bfeb4"/></dir><file name="Status.php" hash="21e06d3543492adc4caf7bf6b8b5ce97"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="ImacleanController.php" hash="7ac62aa085d3d57a8774f07aedfa04f0"/></dir><file name="IndexController.php" hash="5337b897bb58eae4917a44abdf78368a"/></dir><dir name="etc"><file name="adminhtml.xml" hash="c8ca5697521cd2ce25fa03c36ca12403"/><file name="config.xml" hash="60fd366178a9cbd239966717eb51e384"/></dir><dir name="sql"><dir name="defcon2imaclean_setup"><file name="mysql4-install-1.0.0.php" hash="fe72157a9b937cc6efd029a0043b2da4"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="defcon2imaclean.xml" hash=""/></dir></dir></dir></dir></target></contents>
     <compatible/>
-    <dependencies/>
+    <dependencies><required><php><min>4.0.0</min><max>6.0.0</max></php></required></dependencies>
 </package>

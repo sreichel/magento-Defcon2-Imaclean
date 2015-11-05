@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Defcon2_Imaclean
+
+ @category   Defcon2
+ @package    Defcon2_Imaclean
+ @copyright  Copyright (c) 2016 Manuel Canepa (http://cv.manuelcanepa.com.ar/)
+-->
+<config>
+    <menu>
+        <system>
+            <children>
+                <d2imaclean module="defcon2imaclean" translate="title">
+                    <title>ImaClean</title>
+                    <action>adminhtml/imaclean</action>
+                </d2imaclean>
+            </children>
+        </system>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <d2imaclean>
+                                <title>ImaClean</title>
+                                <sort_order>0</sort_order>
+                            </d2imaclean>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

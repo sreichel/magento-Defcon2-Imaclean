@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Defcon2_Imaclean>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Defcon2_Imaclean>
+    </modules>
+</config>

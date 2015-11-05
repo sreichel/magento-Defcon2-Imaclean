@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!--
+ Defcon2_Imaclean
+
+ @category   Defcon2
+ @package    Defcon2_Imaclean
+ @copyright  Copyright (c) 2016 Manuel Canepa (http://cv.manuelcanepa.com.ar/)
+-->
+<config>
+    <modules>
+        <Defcon2_Imaclean>
+            <version>1.0.0</version>
+        </Defcon2_Imaclean>
+    </modules>
+    <global>
+        <models>
+            <defcon2imaclean>
+                <class>Defcon2_Imaclean_Model</class>
+                <resourceModel>defcon2imaclean_mysql4</resourceModel>
+            </defcon2imaclean>
+            <defcon2imaclean_mysql4>
+                <class>Defcon2_Imaclean_Model_Mysql4</class>
+                <entities>
+                    <imaclean>
+                        <table>imaclean</table>
+                    </imaclean>
+                </entities>
+            </defcon2imaclean_mysql4>
+        </models>
+        <resources>
+            <defcon2imaclean_setup>
+                <setup>
+                    <module>Defcon2_Imaclean</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </defcon2imaclean_setup>
+            <defcon2imaclean_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </defcon2imaclean_write>
+            <defcon2imaclean_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </defcon2imaclean_read>
+        </resources>
+        <blocks>
+            <defcon2imaclean>
+                <class>Defcon2_Imaclean_Block</class>
+            </defcon2imaclean>
+        </blocks>
+        <helpers>
+            <defcon2imaclean>
+                <class>Defcon2_Imaclean_Helper</class>
+            </defcon2imaclean>
+        </helpers>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <defcon2imaclean after="Mage_Adminhtml">Defcon2_Imaclean_Adminhtml</defcon2imaclean>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>
