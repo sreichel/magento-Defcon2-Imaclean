@@ -9,6 +9,15 @@
  */
 class Defcon2_Imaclean_Adminhtml_ImacleanController extends Mage_Adminhtml_Controller_Action
 {
+    protected function _initAction()
+    {
+        $this->loadLayout()
+            ->_setActiveMenu('defcon2imaclean/items')
+            ->_addBreadcrumb(Mage::helper('adminhtml')->__('Items Manager'), Mage::helper('adminhtml')->__('Item Manager'));
+
+        return $this;
+    }
+
     public function indexAction()
     {
         $this->loadLayout();
