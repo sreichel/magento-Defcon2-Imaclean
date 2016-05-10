@@ -1,15 +1,18 @@
 <?xml version="1.0"?>
 <!--
- Defcon2_Imaclean
-
- @category   Defcon2
- @package    Defcon2_Imaclean
- @copyright  Copyright (c) 2016 Manuel Canepa (http://cv.manuelcanepa.com.ar/)
+/**
+ * Defcon2_Imaclean
+ *
+ * @category   Defcon2
+ * @package    Defcon2_Imaclean
+ * @copyright  Copyright (c) 2016 Manuel Canepa (http://cv.manuelcanepa.com.ar/)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
 -->
 <config>
     <modules>
         <Defcon2_Imaclean>
-            <version>1.0.0</version>
+            <version>1.2.1</version>
         </Defcon2_Imaclean>
     </modules>
     <global>
