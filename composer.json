@@ -1,0 +1,17 @@
+{
+    "name": "defcon2/imaclean",
+    "type": "magento-module",
+    "description": "This extension allows to list all the product images that already are not in use and to erase them.",
+    "homepage": "https://www.magentocommerce.com/magento-connect/image-clean.html",
+    "license": "OSL-3.0",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "authors": [
+        {
+            "name": "Manuel Canepa",
+            "email": "manuelcanepa@gmail.com",
+            "role": "Author/Maintainer"
+        }
+    ]
+}
