@@ -35,19 +35,24 @@ class Defcon2_Imaclean_Helper_Data extends Mage_Core_Helper_Abstract
 
     public function compareList()
     {
-        $valores = Mage::getModel('defcon2imaclean/imaclean')->getCollection()->getImages();
-
-        $pepe = 'media' . DS . 'catalog' . DS . 'product';
-
-        $leer = $this->listDirectories($pepe);
-
         $model = Mage::getModel('defcon2imaclean/imaclean');
-        foreach ($leer as $item) {
+
+        $resource = $model->getResource();
+        $connection = $resource->getReadConnection();
+        $connection->truncateTable($resource->getMainTable());
+        $connection->changeTableAutoIncrement($resource->getMainTable(), 1);
+
+        $path = 'media' . DS . 'catalog' . DS . 'product';
+        $files = $this->listDirectories($path);
+
+        $gallery = Mage::getModel('defcon2imaclean/imaclean')->getCollection()->getImages();
+
+        foreach ($files as $item) {
             try {
                 $item = strtr($item, '\\', '/');
-                if (!in_array($item, $valores)) {
-                    $valdir[]['filename'] = $item;
-                    $model->setData(array('filename' => $item))->setId(null);
+                if (!in_array($item, $gallery)) {
+                    $model->setId(null);
+                    $model->setData(array('filename' => $item));
                     $model->save();
                 }
             } catch (Zend_Db_Exception $e) {

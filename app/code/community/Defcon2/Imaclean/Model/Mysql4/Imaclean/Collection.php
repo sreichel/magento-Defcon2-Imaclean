@@ -18,8 +18,9 @@ class Defcon2_Imaclean_Model_Mysql4_Imaclean_Collection extends Mage_Core_Model_
         $this->_init('defcon2imaclean/imaclean');
     }
 
-    // trae imagenes que estan guardadas en la base de datos...
-
+    /**
+     * trae imagenes que estan guardadas en la base de datos...
+     */
     public function getImages()
     {
         try {
