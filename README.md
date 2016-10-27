@@ -1,7 +1,5 @@
 # Magento: Image Clean
 
-Please [donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=84KDBZGHY8BYQ) (Donation goes to author!)
-
 This estension lists all the product images that they find in the directory "media/catalog/product" and that they do not in the database. It allows to select and to erase these files
 
 ## Compatible with:

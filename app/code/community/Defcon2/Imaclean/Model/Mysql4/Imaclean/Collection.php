@@ -26,17 +26,14 @@ class Defcon2_Imaclean_Model_Mysql4_Imaclean_Collection extends Mage_Core_Model_
         try {
             $this->setConnection($this->getResource()->getReadConnection());
             $this->getSelect()
-                ->from(array('main_table' => $this->getTable('catalog/product_attribute_media_gallery')), '*')
+                ->from(array('main_table' => $this->getTable('catalog/product_attribute_media_gallery')), 'value')
                 ->group(array('value_id'));
 
-            $array = array();
-            foreach ($this->getData() as $item) {
-                $array[] = $item['value'];
-            }
+            $images = array_unique($this->getColumnValues('value'));
         } catch (Exception $e) {
             Mage::log($e->getMessage());
         }
 
-        return $array;
+        return $images;
     }
 }
