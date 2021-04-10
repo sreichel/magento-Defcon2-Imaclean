@@ -1,3 +1,7 @@
+# Deprecated
+
+After comments at https://github.com/OpenMage/magento-lts/issues/1475 i'll archive this in favor of https://github.com/fballiano/magento1-image-cleaner.
+
 # Magento: Image Clean
 
 This estension lists all the product images that they find in the directory "media/catalog/product" and that they do not in the database. It allows to select and to erase these files
